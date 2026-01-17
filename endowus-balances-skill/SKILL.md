@@ -18,10 +18,10 @@ Check your Endowus investment account for balances, transactions, and portfolio 
 ## Quick Start
 
 ```bash
-# 1. Open Endowus in browser (user logs in manually)
-npx agent-browser open https://endowus.com/ --headed
+# 1. Open Endowus app directly (login form is here)
+npx agent-browser open https://app.sg.endowus.com/ --headed
 
-# 2. User clicks "log in" and authenticates
+# 2. User authenticates in the browser
 # 3. Once logged in, run extraction scripts from this skill directory
 ```
 
@@ -30,10 +30,14 @@ npx agent-browser open https://endowus.com/ --headed
 ### Step 1: Open Browser and Authenticate
 
 ```bash
-npx agent-browser open https://endowus.com/ --headed
+# Go directly to the app where the login form is
+npx agent-browser open https://app.sg.endowus.com/ --headed
 npx agent-browser snapshot -i
+
+# If login form is not found, fall back to main site
+# npx agent-browser open https://endowus.com/ --headed
+# npx agent-browser snapshot -i
 # Look for "log in" link and click it
-npx agent-browser click @e9  # or find the login ref
 ```
 
 **IMPORTANT**: Never ask for or handle user credentials. Always prompt the user to enter credentials directly in the browser window.
