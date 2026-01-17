@@ -8,7 +8,7 @@ compatibility: Requires bun runtime, and agent-browser npm package.
 
 Extract balances and transaction data from Singapore financial websites via browser automation.
 
-## Quick Start
+## Workflow
 
 ### Prerequisites
 
@@ -17,6 +17,7 @@ Ensure you have the following installed:
 - Bun runtime (install via `curl -fsSL https://bun.sh/install | bash`)
 - Agent-browser (install via `npm install -g agent-browser`)
 - Chromium (install via `agent-browser install`)
+- Read `history` folder for latest information and trouble shooting tips
 
 ### Steps
 
@@ -165,6 +166,14 @@ Reusable shell scripts in `scripts/` for common automation tasks.
 | `detect-frames.sh`         | When `snapshot` returns empty or minimal content (DBS, OCBC legacy sites use framesets) | `./scripts/detect-frames.sh`                      |
 | `extract-balances.sh`      | Quick extraction of SGD amounts and currency patterns from current page                 | `./scripts/extract-balances.sh`                   |
 | `load-all-transactions.sh` | When transaction list has "Load more" pagination                                        | `./scripts/load-all-transactions.sh [max_clicks]` |
+
+## Dealing with Dynamic Sites and Documenting new lines
+
+- It's common for financial websites to always update their page design, layout, security system and more.
+- What works today may not work tomorrow.
+- Everytime you discover a way to fetch information that the user is looking for, update it in `history` folder within the skills directory.
+- Create a new file for each institution, documenting the changes and the new approach. (e.g `dbs.md`)
+- Be very specific about the new approach that you discovered
 
 ## Additional Resources
 
