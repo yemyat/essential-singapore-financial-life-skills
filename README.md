@@ -1,6 +1,6 @@
-# Essential Singapore Financial Life Skills
+# Un-open Banking Agent Skill (Singapore)
 
-A collection of skills for managing personal finance tasks in Singapore.
+A collection of AI [agent skills](https://agentskills.io/) that helps users pull their data from Singapore financial institutions.
 
 ## Installation
 
@@ -34,6 +34,8 @@ These skills use browser automation rather than private APIs whenever possible s
 Singapore's "open banking" isn't really open. The latest attempt, [SG FinDex](https://www.mas.gov.sg/development/fintech/sgfindex), launched with great promises but quietly faded in 2024.
 
 The problem? There are no fintechs in the program. I've never seen a single fintech integrated with SG FinDex—neither as a data provider nor as a consumer of financial data. We can speculate why, but the reality is clear: there's a gap in the market that no one seems able (or willing) to solve.
+
+(Thus, the name un-open banking)
 
 So this project takes a different approach: it teaches AI agents to scrape your own financial data on your behalf. And it does so in a more privacy-respecting way—your credentials stay local, you watch everything happen in real-time, and no credential data (username, password, cookies, tokens) passes through LLMs.
 
