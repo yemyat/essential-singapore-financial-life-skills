@@ -2,6 +2,8 @@
 
 A collection of AI [agent skills](https://agentskills.io/) that helps users pull their data from Singapore financial institutions.
 
+Note: To be used with Coding Agents such as Amp, Claude Code, Droid, Opencode, etc. Do not use this with Claude web / Claude desktop.
+
 ## Installation
 
 ```bash
